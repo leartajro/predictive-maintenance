@@ -30,6 +30,13 @@
 
 ## Results
 
+
+| Model | Imbalance Strategy | Precision (failure) | Recall (failure) | F1 (failure) | False Negatives |
+|---|---|---|---|---|---|
+| Logistic Regression | SMOTE | 0.83 | 0.81 | 0.82 | 360 |
+| Random Forest | SMOTE | 0.96 | 0.98 | 0.97 | 31 |
+| Random Forest | `class_weight='balanced'` | 0.88 | 0.56 | 0.68 | 30 |
+
 - After trying multiple models, and ways of handling the class imbalance. Using SMOTE alongside Random Forest produced the best results.
 
 - This includes a 97% accuracy across the board in precision, recall, and f1 score. 
